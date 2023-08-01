@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 92vh;
+    padding: 0 50px;
+}
+.left{
+    flex-basis: 40%;
+    padding: 10px;
+}
+.right{
+    flex-basis: 60%;
+    padding: 10px;
+}
+/**.left,.right{
+    flex-basis: 50%;
+    padding: 10px;
+}**/
+textarea{
+    width: 100%;
+    height: 28%;
+    background-color: #212529;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 0 0 .5rem .5rem;
+    font-size: 20px;
+    resize: none;
+}
+label i{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.left-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background: #495057;
+    border-radius: .5rem .5rem 0 0 ;
+    padding-right: 10px;
+    font-weight: 600;
+}
+.right-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background: #495057;
+    border-radius: .5rem .5rem 0 0 ;
+    padding-right: 10px;
+    font-weight: 600;
+}
+iframe{
+    width: 100%;
+    height: 84.5vh;
+    background: #fff;
+    border-radius: 0 0 .5rem .5rem;
+    border: 0;
+    outline: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 55px;
+    width: 100%;
+    background-color: #212529;
+}
+nav>img{
+    width: 3rem;
+}
+nav>#nav-right{
+    display: flex;
+    justify-content: space-between;
+}
+nav>#nav-right>button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #000;
+    /*border: 1px solid #fff;*/
+    border: 0px solid #fff;
+    transition: 0.3s;
+    white-space: nowrap;
+    margin-left: 30px;
+    font-weight: 600;
+}
+nav>#nav-right>button:hover{
+    background-color: #495057;
+}
+
+.dwld-bttn{
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: 600;
+  }
+  .dwld-bttn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
