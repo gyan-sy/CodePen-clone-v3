@@ -27,6 +27,10 @@ body{
     padding: 10px;
     max-height: 90vh;
 }
+/**.left,.right{
+    flex-basis: 50%;
+    padding: 10px;
+}**/
 textarea{
     width: 100%;
     height: 28%;
@@ -48,18 +52,26 @@ textarea::-webkit-scrollbar {
     width: 5px;
     border-radius: 10px; 
 }
+/* Track */
 textarea::-webkit-scrollbar-track {
   background: #f1f1f1; 
   border-radius: 10px; 
 }
+ 
+/* Handle */
 textarea::-webkit-scrollbar-thumb {
   background: #888; 
   border-radius: 10px; 
 }
+
+/* Handle on hover */
 textarea::-webkit-scrollbar-thumb:hover {
   background: #555; 
   border-radius: 10px; 
 }
+
+
+
 
 
 .arrow {
@@ -127,6 +139,12 @@ nav{
 nav>img{
     width: 2.3rem;
 }
+/*
+nav>#nav-right{
+    display: flex;
+    justify-content: space-between;
+}
+*/
 nav>#nav-right>button{
     padding: 0.6rem 2rem;
     border-radius: 50px;
@@ -157,29 +175,19 @@ nav>#nav-right>button:hover{
     color: white;
   }
 
-textarea.code-textarea.collapsed {
-    display: none;
-}
-.collapse-button {
-    display: flex;
-    align-items: center;
-    background-color: #000;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    transition-duration: 0.1s;
-    font-weight: 600;
-    margin-left: 10px;
-}
-.collapse-button:hover {
-    background-color: #4CAF50;
-}
 
+
+
+
+
+
+/* Add these media queries to your existing CSS */
+
+/* Mobile devices (portrait and landscape) */
 
 @media screen and (max-width: 768px) {
     .left,.right {
-        padding: 0; 
+        padding: 0; /* Adjust the left and right padding as needed */
         margin-top: 0.5rem;
     }
     textarea{
@@ -193,6 +201,9 @@ textarea.code-textarea.collapsed {
         font-size: smaller;
         padding: 0.1rem 0.8rem;
     }
+   
+
+
 
     nav{
         padding: 0 1rem;
@@ -205,14 +216,25 @@ textarea.code-textarea.collapsed {
         padding: 0.4rem 0.7rem;
         font-size: small;
     }
+
+
     
     textarea{
         height: 40%;
     }
 
+
+
+
+
+
+
+
+
+
     .container {
         flex-direction: column;
-        padding: 0 20px;
+        padding: 0 20px; /* Adjust padding for smaller screens */
     }
 
     .left, .right {
@@ -220,11 +242,52 @@ textarea.code-textarea.collapsed {
     }
 
     textarea {
-        height: 20vh;
+        height: 20vh; /* Adjust the height of textareas for smaller screens */
     }
 }
+
+/* Tablets and small desktop screens */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        padding: 0 30px; 
+        padding: 0 30px; /* Adjust padding for tablet screens */
     }
+}
+
+/* Larger desktop screens */
+@media screen and (min-width: 1025px) {
+    /* Add any additional styles for larger screens here */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this CSS rule for collapsed textareas */
+textarea.code-textarea.collapsed {
+    display: none;
+}
+
+/* Add this CSS rule to style the collapse buttons */
+.collapse-button {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.collapse-button:hover {
+    background-color: #4CAF50;
 }
