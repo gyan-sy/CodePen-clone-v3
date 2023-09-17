@@ -15,21 +15,18 @@ body{
 .container{
     display: flex;
     width: 100%;
-    height: 92vh;
-    padding: 0 50px;
+    padding: 0 3rem;
 }
 .left{
     flex-basis: 40%;
     padding: 10px;
+    max-height: 90vh;
 }
 .right{
     flex-basis: 60%;
     padding: 10px;
+    max-height: 90vh;
 }
-/**.left,.right{
-    flex-basis: 50%;
-    padding: 10px;
-}**/
 textarea{
     width: 100%;
     height: 28%;
@@ -38,10 +35,48 @@ textarea{
     padding: 10px 20px;
     border: 0;
     outline: 0;
-    border-radius: 0 0 .5rem .5rem;
+    border-radius: .5rem;
     font-size: 20px;
     resize: none;
 }
+
+
+
+
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px; 
+}
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px; 
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+  border-radius: 10px; 
+}
+
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+
+
+
 label i{
     margin-right: 10px;
     margin-left: 10px;
@@ -50,25 +85,31 @@ label i{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 30px;
+    height: 2rem;
     background: #495057;
-    border-radius: .5rem .5rem 0 0 ;
-    padding-right: 10px;
+    border-radius: .5rem;
+    padding-right: 0.5rem;
     font-weight: 600;
+    margin-top: 0.3rem;
+    vertical-align: top;
+}
+.left-label-right{
+    display: flex;
+    justify-content: space-between;
 }
 .right-label{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 30px;
     background: #495057;
     border-radius: .5rem .5rem 0 0 ;
-    padding-right: 10px;
     font-weight: 600;
+    margin-top: 0.3rem;
+    vertical-align: top;
 }
 iframe{
     width: 100%;
-    height: 84.5vh;
+    height: 85vh;
     background: #fff;
     border-radius: 0 0 .5rem .5rem;
     border: 0;
@@ -78,27 +119,22 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
-    height: 55px;
+    padding: 0 3.7rem;
+    height: 7vh;
     width: 100%;
     background-color: #212529;
 }
 nav>img{
-    width: 3rem;
-}
-nav>#nav-right{
-    display: flex;
-    justify-content: space-between;
+    width: 2.3rem;
 }
 nav>#nav-right>button{
-    padding: 10px 20px;
+    padding: 0.6rem 2rem;
     border-radius: 50px;
     color: #fff;
     background-color: #000;
     /*border: 1px solid #fff;*/
     border: 0px solid #fff;
-    transition: 0.3s;
-    white-space: nowrap;
+    transition: 0.2s;
     margin-left: 30px;
     font-weight: 600;
 }
@@ -120,3 +156,75 @@ nav>#nav-right>button:hover{
     background-color: #4CAF50; /* Green */
     color: white;
   }
+
+textarea.code-textarea.collapsed {
+    display: none;
+}
+.collapse-button {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.collapse-button:hover {
+    background-color: #4CAF50;
+}
+
+
+@media screen and (max-width: 768px) {
+    .left,.right {
+        padding: 0; 
+        margin-top: 0.5rem;
+    }
+    textarea{
+        padding: 5px 10px;
+    }
+    .left-label,.right-label{
+        height: 1.5rem;
+        font-size: small;
+    }
+    .dwld-bttn{
+        font-size: smaller;
+        padding: 0.1rem 0.8rem;
+    }
+
+    nav{
+        padding: 0 1rem;
+        height: 6vh;
+    }
+    nav>img{
+        width: 1.8rem;
+    }
+    nav>#nav-right>button{
+        padding: 0.4rem 0.7rem;
+        font-size: small;
+    }
+    
+    textarea{
+        height: 40%;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .left, .right {
+        flex-basis: 100%;
+    }
+
+    textarea {
+        height: 20vh;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px; 
+    }
+}
