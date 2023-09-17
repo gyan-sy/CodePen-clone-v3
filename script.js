@@ -55,12 +55,47 @@ function downloadCode(codeType) {
     }
     
     link.click();
-    
-    // Clean up resources
+
     URL.revokeObjectURL(url);
 }
 
-window.onload = function() {
+
+
+
+// JavaScript to toggle the visibility of textareas and adjust their size
+function toggleTextarea(codeType) {
+    const textarea = document.getElementById(codeType);
+    textarea.classList.toggle('collapsed');
+
+    const visibleTextareas = document.querySelectorAll('.code-textarea:not(.collapsed)').length;
+
+    const newHeight = 85 / visibleTextareas + '%';
+
+    document.querySelectorAll('.code-textarea:not(.collapsed)').forEach(textarea => {
+        textarea.style.height = newHeight;
+    });
+
+    saveDataToLocalStorage();
+}
+
+function loadAndApplyState() {
+    const codeTypes = ["html-code", "css-code", "js-code"];
+
+    for (const codeType of codeTypes) {
+        const textarea = document.getElementById(codeType);
+        const isCollapsed = localStorage.getItem(codeType + "-state") === "collapsed";
+
+        const isMobile = window.innerWidth < 768;
+
+        if ((isMobile && codeType !== "html-code") || isCollapsed) {
+            textarea.classList.add("collapsed");
+        }
+    }
+
     loadSavedData();
-    run(); // This will also run the code to show the output when the page loads.
+    run();
+}
+
+window.onload = function () {
+    loadAndApplyState();
 };
