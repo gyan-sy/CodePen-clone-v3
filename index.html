@@ -12,31 +12,37 @@
     <nav>
         <img src="g1.png" alt="logo">
         <div id="nav-right">
-            <button>CodePen v1</button>
-            <button>CodePen v2</button>
             <button><a href="https://gyan-sy.github.io/cv/">My Portfolio</a></button>
         </div>
     </nav>
     <div class="container">
         <div class="left">
             <div class="left-label">
-                <label><i class="fa-brands fa-html5" style="color: #f8495a;"></i>HTML </label>
-                <button class="dwld-bttn" onclick="downloadCode('html-code')">Download</button>
+                <label><i class="fa-brands fa-html5" style="color: #f8495a;"></i>HTML</label>
+                <div class="left-label-right">
+                    <button class="dwld-bttn" onclick="downloadCode('html-code')">Download</button>
+                    <button class="collapse-button" onclick="toggleTextarea('html-code')"><i class="arrow down"></i></button>
+                </div>
             </div>
-            <textarea id="html-code" onkeyup="run()"></textarea>
+            <textarea id="html-code" data-type="html" class="code-textarea" onkeyup="run()"></textarea>
             
             <div class="left-label">
                 <label><i class="fa-brands fa-css3-alt" style="color: #6be6ff;"></i>CSS</label>
-                <button class="dwld-bttn" onclick="downloadCode('css-code')">Download</button>
+                <div class="left-label-right">
+                    <button class="dwld-bttn" onclick="downloadCode('css-code')">Download</button>
+                    <button class="collapse-button" onclick="toggleTextarea('css-code')"><i class="arrow down"></i></button>
+                </div>
             </div>
-            <textarea id="css-code" onkeyup="run()"></textarea>
-
+            <textarea id="css-code" data-type="css" class="code-textarea" onkeyup="run()"></textarea>
+    
             <div class="left-label">
                 <label><i class="fa-brands fa-square-js" style="color: #fbf413;"></i>JAVASCRIPT</label>
-                <button class="dwld-bttn" onclick="downloadCode('js-code')">Download</button>
+                <div class="left-label-right">
+                    <button class="dwld-bttn" onclick="downloadCode('js-code')">Download</button>
+                    <button class="collapse-button" onclick="toggleTextarea('js-code')"><i class="arrow down"></i></button>
+                </div>
             </div>
-            <textarea id="js-code" onkeyup="run()"></textarea>
-            
+            <textarea id="js-code" data-type="js" class="code-textarea" onkeyup="run()"></textarea>
         </div>
         <div class="right">
             <div class="right-label">
