@@ -171,23 +171,15 @@ nav>#nav-right>button:hover{
     font-weight: 600;
   }
   .dwld-bttn:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
   }
 
 
 
-
-
-
-
-/* Add these media queries to your existing CSS */
-
-/* Mobile devices (portrait and landscape) */
-
 @media screen and (max-width: 768px) {
     .left,.right {
-        padding: 0; /* Adjust the left and right padding as needed */
+        padding: 0;
         margin-top: 0.5rem;
     }
     textarea{
@@ -234,7 +226,7 @@ nav>#nav-right>button:hover{
 
     .container {
         flex-direction: column;
-        padding: 0 20px; /* Adjust padding for smaller screens */
+        padding: 0 20px; 
     }
 
     .left, .right {
@@ -242,39 +234,27 @@ nav>#nav-right>button:hover{
     }
 
     textarea {
-        height: 20vh; /* Adjust the height of textareas for smaller screens */
+        height: 20vh;
     }
 }
 
 /* Tablets and small desktop screens */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        padding: 0 30px; /* Adjust padding for tablet screens */
+        padding: 0 30px;
     }
 }
 
 /* Larger desktop screens */
 @media screen and (min-width: 1025px) {
-    /* Add any additional styles for larger screens here */
 }
 
 
 
 
-
-
-
-
-
-
-
-
-/* Add this CSS rule for collapsed textareas */
 textarea.code-textarea.collapsed {
     display: none;
 }
-
-/* Add this CSS rule to style the collapse buttons */
 .collapse-button {
     display: flex;
     align-items: center;
